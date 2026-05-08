@@ -6,7 +6,8 @@ app.use(cors())
 
 app.get('/news', async (req, res) => {
   const { query, country, pageSize } = req.query
-  const url = `https://gnews.io/api/v4/search?q=${encodeURIComponent(query)}&lang=en&country=${country}&max=${pageSize}&apikey=3d209ae2812c08306dae1d385124426d`
+  const apiKey = process.env.GNEWS_API_KEY
+  const url = `https://gnews.io/api/v4/search?q=${encodeURIComponent(query)}&lang=en&country=${country}&max=${pageSize}&apikey=${apiKey}`
 
   try {
     const response = await fetch(url)
