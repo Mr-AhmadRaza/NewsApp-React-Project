@@ -6,7 +6,7 @@ const NewItem = (props) => {
   return (
     <div className="d-flex mb-4">
       <div className="card h-100 w-100" style={{ minHeight: '400px', maxHeight: '400px' }}>
-        
+
         <img
           src={imageUrl || "https://placehold.co/400x200?text=No+Image"}
           className="card-img-top"
@@ -32,12 +32,12 @@ const NewItem = (props) => {
           }}>
             {description}
           </p>
-
           <a
             href={newsurl}
             target="_blank"
             rel="noreferrer"
             className="btn btn-dark mt-auto w-100"
+            style={{ width: '100%', display: 'block' }}
           >
             Read More
           </a>
@@ -45,7 +45,7 @@ const NewItem = (props) => {
 
       </div>
     </div>
-    
+
   )
 }
 
