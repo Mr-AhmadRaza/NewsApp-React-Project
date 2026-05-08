@@ -14,7 +14,7 @@ const App = () => {
 
         <Routes>
           {/* Default route */}
-          <Route path="/" element={<News key="general" pageSize={5} country="pk" category="eneral" />} />
+          <Route path="/" element={<News key="general" pageSize={5} country="pk" category="General" />} />
 
           <Route path="/business" element={<News key="business" pageSize={5} country="pk" category="Business" />} />
 
