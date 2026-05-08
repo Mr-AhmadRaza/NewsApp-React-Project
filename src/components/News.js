@@ -20,7 +20,7 @@ function News(props) {
     setLoading(true)
 
     try {
-      const url = `https://newsapp-react-project-production.up.railway.app/news?query=${encodeURIComponent(query)}&country=${country}&pageSize=${pageSize}`
+     const url = `/api/news?query=${encodeURIComponent(query)}&country=${country}&pageSize=${pageSize}`
       console.log('Fetching from:', url)
 
       const response = await fetch(url)
