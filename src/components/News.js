@@ -20,8 +20,7 @@ function News(props) {
     setLoading(true)
 
     try {
-      const url = `https://gnews.io/api/v4/search?q=${encodeURIComponent(query)}&lang=en&country=${country}&max=${pageSize}&apikey=3d209ae2812c08306dae1d385124426d`
-
+      const url = `https://newsapp-react-project-production.up.railway.app/news?query=${encodeURIComponent(query)}&country=${country}&pageSize=${pageSize}`
       console.log('Fetching from:', url)
 
       const response = await fetch(url)
